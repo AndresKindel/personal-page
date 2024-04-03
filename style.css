@@ -1,0 +1,28 @@
+.header {
+    line-height:25px;
+    font-size: 1.17em;
+    text-decoration: none;
+    margin: 0;
+    color: black;
+}
+.contato {
+    position: relative;
+    top: 25px;
+    text-align: right;
+}
+a:hover {
+    color: blue;
+}
+#left {
+    float: left;
+    width: 50%;
+  }
+
+.data {
+    margin-left: 50px;
+}
+body {
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
