@@ -9,18 +9,20 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: Arial, sans-serif;
     background-color: #1f1e1e;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
 }
 
 header {
     display: flex;
     position: fixed;
     justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     width: 100%;
-    height: 75px;
-    background-color: #f12630;
+    line-height: 75px;
+    background-color: #b61c24;
     font-weight: bold;
     font-size: 1.25rem;
 }
@@ -34,10 +36,55 @@ nav {
 nav a{
     text-decoration: none;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav a:hover {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(79, 79, 247);
+    border: 0;
+    margin: 0;
+    background-color: rgb(57, 57, 134);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#welcome-section {
+    color: white;
+    font-size: 1.75rem;
+}
+
+#welcome-section h1, #welcome-section h2 {
+    font-weight: bold;
+}
+
+#welcome-section a {
+    text-decoration: none;
+    color: rgb(57, 57, 134);
+}
+
+#welcome-photo {
+    width: 400px;
+    border-radius: 100%;
+    border: 2px white solid;
+}
+
+#description {
+    color: #f12630;
+    font-size: 1.5rem;
+}
+
+#formacao {
+    background-color: rgb(57, 57, 134);
+    color: white;
+}
+
+#skills {
+    color: white;
 }
