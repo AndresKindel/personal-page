@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: var(--black);
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
     font-family: 'Poppins', sans-serif;
     flex-wrap: wrap;
 }
@@ -32,6 +32,7 @@ header {
     background-color: var(--red);
     font-weight: bold;
     font-size: 1.25rem;
+    z-index: 1;
 }
 
 nav {
@@ -79,7 +80,17 @@ section {
 #welcome-photo {
     width: 400px;
     border-radius: 100%;
-    border: 2px white solid;
+    border: 2px var(--red) solid;
+}
+
+#photo {
+    width: 450px;
+    filter: grayscale(100%);
+}
+
+#photo:hover {
+    filter: none;
+    transform: scale(1.1);
 }
 
 #description {
@@ -107,7 +118,7 @@ section {
     padding-bottom: 30px;
 }
 
-#cursos {
+#cursos, #skills {
     display: grid;
     grid-template-columns: 35% 35%;
     gap: 10%;
@@ -125,25 +136,50 @@ section {
     color: pink;
 }
 
-.cursos {
-    border: #1f1e1e 3px solid;
-    background-color: var(--gray);
+.cursos, .skills-class {
     height: 80%;
 }
 
-.cursos h1 {
+.cursos h1, .skills-class h1 {
     background-color: var(--black);
+    color: var(--red);
 }
 
-.cursos div {
+hr {
+    border: 2px var(--black) solid;
+}
+
+.fases {
     text-align: left;
+    display: grid;
 }
 
-.cursos div li {
+.cursos div li, .skills-class div li {
     list-style-type: none;
     padding: 5px 5px 5px 25px;
+    text-align: left;
 }
 
 .cursos div h2 {
     padding-left: 10px;
+    text-shadow: 2px 2px 1px var(--black);
+}
+
+#disciplinas, #cursos-feitos, #skills-idiomas, #skills-db {
+    display: grid;
+    gap: 20px;
+}
+
+.disciplinas-div {
+    background-color: var(--gray);
+    border: #1f1e1e 3px solid;
+}
+
+#photo {
+    place-self: center;
+}
+
+.skills-div {
+    border: 3px var(--black) solid;
+    background-color: var(--gray);
 }
