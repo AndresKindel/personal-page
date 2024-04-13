@@ -48,6 +48,18 @@ body {
     color: white;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+/* ----- nav e header ----- */
+
 header {
     position: fixed;
     align-items: center;
@@ -76,27 +88,24 @@ nav {
     }
 }
 
-nav a{
+.nav-link {
     text-decoration: none;
     color: white;
 }
 
-nav a:hover {
+.nav-link:hover {
     border: 0;
     margin: 0;
     background-color: var(--blue);
 }
 
-section {
+/* ----- welcome-section ----- */
+
+#welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
-#welcome-section {
     font-size: 4rem;
 }
 
@@ -136,41 +145,95 @@ section {
     font-size: 2.5rem;
 }
 
-#cursos {
-    background: var(--blue);
+/* ----- projects-section ----- */
+
+#projects-section {
+    background-color: var(--blue);
 }
+
+.projeto {
+    background: var(--black);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    color: var(--red);
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.projeto-img {
+    display: block;
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.projeto-titulo {
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+/* ----- disciplinas-cursos----- */
+
+.section-header {
+    font-size: 4rem;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid;
+}
+
+#disciplinas-cursos {
+    background-color: var(--gray);
+}
+
+#skills {
+    background-color: var(--blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    grid-auto-rows: auto;
+    align-items: start;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 6rem;
+}
+
+.cursos, .skills {
+    position: relative;
+    background-color: var(--black);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cursos h1, .skills h1 {
+    color: var(--red);
+}
+
+.cursos p, .skills p {
+    text-align: left;
+}
+
+hr {
+    color: var(--red);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* contato section */
 
 #contato {
     font-weight: bold;
-    background-color: var(--gray);
 }
 
 #contato h1 {
     font-size: 9.5rem;
     padding-bottom: 30px;
-}
-
-#cursos, #skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 10rem;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 6rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
-}
-
-@media (max-width: 450px) { 
-    #cursos, #skills {
-        grid-template-columns: 1fr;
-        grid-gap: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .cursos h1, .cursos h2, .cursos li{
-        font-size: 1.4rem;
-    }
 }
 
 .detalhes-contato {
@@ -184,59 +247,4 @@ section {
 
 .detalhes-contato:hover {
     color: pink;
-}
-
-.cursos, .skills-class {
-    font-size: 1.6rem;
-    height: 80%;
-}
-
-@media (max-width: 450px) {
-    .cursos, .skills-class {
-        height: 90%;
-    }
-}
-
-.cursos h1, .skills-class h1 {
-    background-color: var(--black);
-    color: var(--red);
-}
-
-hr {
-    border: 2px var(--black) solid;
-}
-
-.fases {
-    text-align: left;
-    display: grid;
-}
-
-.cursos div li, .skills-class div li {
-    list-style-type: none;
-    padding: 5px 5px 5px 25px;
-    text-align: left;
-}
-
-.cursos div h2 {
-    padding-left: 10px;
-    text-shadow: 2px 2px 1px var(--black);
-}
-
-#disciplinas, #cursos-feitos, #skills-idiomas, #skills-db {
-    display: grid;
-    gap: 20px;
-}
-
-.disciplinas-div {
-    background-color: var(--gray);
-    border: #1f1e1e 3px solid;
-}
-
-#photo {
-    place-self: center;
-}
-
-.skills-div {
-    border: 3px var(--black) solid;
-    background-color: var(--gray);
 }
