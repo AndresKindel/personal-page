@@ -83,8 +83,8 @@ nav {
 }
 
 @media (max-width: 450px) {
-    nav {
-      flex-wrap: wrap;
+    .nav-text {
+        display: none;
     }
 }
 
@@ -94,9 +94,8 @@ nav {
 }
 
 .nav-link:hover {
-    border: 0;
-    margin: 0;
-    background-color: var(--blue);
+    color: var(--blue);
+    transform: scale(1.1);
 }
 
 /* ----- welcome-section ----- */
@@ -124,22 +123,6 @@ nav {
     border: 2px var(--red) solid;
 }
 
-#photo {
-    width: 450px;
-    filter: grayscale(100%);
-}
-
-#photo:hover {
-    filter: none;
-    transform: scale(1.1);
-}
-
-@media (max-width: 450px) {
-    #photo {
-        display: none;
-    }
-}
-
 #description {
     color: var(--red);
     font-size: 2.5rem;
@@ -147,7 +130,7 @@ nav {
 
 /* ----- projects-section ----- */
 
-#projects-section {
+#projetos-section {
     background-color: var(--blue);
 }
 
@@ -161,11 +144,16 @@ nav {
     text-decoration: none;
 }
 
+.projeto:hover {
+    transform: scale(1.05);
+}
+
 .projeto-img {
     display: block;
     height: calc(100% - 6.8rem);
     width: 100%;
     object-fit: cover;
+    border: 1px solid var(--black);
 }
 
 .projeto-titulo {
@@ -173,7 +161,7 @@ nav {
     padding: 2rem;
 }
 
-/* ----- disciplinas-cursos----- */
+/* ----- disciplinas-cursos ----- */
 
 .section-header {
     font-size: 4rem;
@@ -247,4 +235,5 @@ hr {
 
 .detalhes-contato:hover {
     color: pink;
+    transform: scale(1.1);
 }
